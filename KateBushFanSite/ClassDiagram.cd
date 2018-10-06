@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="KateBushFanSite.Models.Repository">
+    <Position X="5.75" Y="4.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAECAAAAAAAAAAAAAABAAAIAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KateBushFanSite.Models.Source">
+    <Position X="3" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAQAQAAAAAAAAAAAAEAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Source.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KateBushFanSite.Models.Story">
+    <Position X="9.25" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAABAEAAAAAAAAAAAAAAAAEBAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Story.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KateBushFanSite.Controllers.HomeController">
+    <Position X="6" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KateBushFanSite.Controllers.SourcesController">
+    <Position X="5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\SourcesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KateBushFanSite.Controllers.StoryController">
+    <Position X="7.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\StoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

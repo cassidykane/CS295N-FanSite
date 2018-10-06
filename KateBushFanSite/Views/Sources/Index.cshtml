@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Source>
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+</head>
+<body>
+	<h2>Sources</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Print Media</th>
+			</tr>
+			<tr>
+				<th>Title</th>
+				<th>Author/s</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (KateBushFanSite.Models.Source p in Model)
+			{
+				if (p.Type == "print")
+				{
+					<tr>
+						<td>@p.PrintTitle</td>
+						<td>@p.PrintAuthor</td>
+					</tr>
+				}
+			}
+			<tr>
+				<th>Online Media</th>
+			</tr>
+			@foreach (KateBushFanSite.Models.Source l in Model)
+			{
+				if (l.Type == "link")
+				{
+					<tr>
+						<td><a href=@l.LinkHref>@l.LinkTitle</a></td>
+					</tr>
+				}
+			}	
+		</tbody>
+	</table>
+	<a href="../home">Home</a>
+</body>
+</html>

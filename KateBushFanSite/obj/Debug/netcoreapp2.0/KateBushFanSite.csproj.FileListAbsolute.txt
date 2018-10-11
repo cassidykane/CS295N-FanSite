@@ -21,3 +21,15 @@ C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\KateBushFanS
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.pdb
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\KateBushFanSite\bin\Debug\netcoreapp2.0\KateBushFanSite.xml
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.csprojAssemblyReference.cache
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\bin\Debug\netcoreapp2.0\KateBushFanSite.xml
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\bin\Debug\netcoreapp2.0\KateBushFanSite.deps.json
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\bin\Debug\netcoreapp2.0\KateBushFanSite.runtimeconfig.json
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\bin\Debug\netcoreapp2.0\KateBushFanSite.runtimeconfig.dev.json
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\bin\Debug\netcoreapp2.0\KateBushFanSite.dll
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\bin\Debug\netcoreapp2.0\KateBushFanSite.pdb
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.csprojAssemblyReference.cache
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.csproj.CoreCompileInputs.cache
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.AssemblyInfoInputs.cache
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.AssemblyInfo.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.dll
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-Lab2\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.pdb

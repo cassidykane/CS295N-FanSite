@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace KateBushFanSite.Models
 {
+    /// <summary>
+    /// Properties for submitted sources
+    /// </summary>
     public class Source
     {
         public string Type { get; set; }

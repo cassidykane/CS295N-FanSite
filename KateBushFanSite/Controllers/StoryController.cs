@@ -7,50 +7,42 @@ using KateBushFanSite.Models;
 
 namespace KateBushFanSite.Controllers
 {
+    /// <summary>
+    /// Controls the logic for displaying and submitting stories
+    /// </summary>
     public class StoryController : Controller
     {
-        Story story;
-        /*
-        public StoryController()
-        {
-            story = new Story()
-            {
-                Title = "Sample",
-                Date = DateTime.Now,
-                UserStory = "This is a sample story created in the constructor"
-            };
-        }
-        */
+        /// <summary>
+        /// Displays the story view populated with stories from the repository
+        /// </summary>
+        /// <returns>story/index.cshtml view, Story objects</returns>
         public ViewResult Index()
         {
             return View(Repository.Stories);
         }
 
-
-        [HttpGet]
+        /// <summary>
+        /// Displays the view for the story-submission form
+        /// </summary>
+        /// <returns>story/submitstory.cshtml view</returns>
         public ViewResult SubmitStory()
         {
             return View();
         }
 
+        /// <summary>
+        /// Sets the default rating of the story to zero
+        /// Retrieves the form inputs and assigns them to corresponding properties of a Story object
+        /// Adds the Story object to the repository
+        /// </summary>
+        /// <param name="story">an instance of the Story class with form-generated properties</param>
+        /// <returns></returns>
         [HttpPost]
-        public ViewResult SubmitStory(Story story)
+        public RedirectToActionResult SubmitStory(Story story)
         {
             story.Rating = 0;
             Repository.AddStory(story);
-            return View();
-        }
-
-        /*
-        [HttpPost]
-        public RedirectToActionResult SubmitStory(string title, string date, string userStory)
-        {
-            story = new Story();
-            story.Title = title;
-            story.Date = DateTime.Parse(date);
             return RedirectToAction("Index");
         }
-        */
-
     }
 }

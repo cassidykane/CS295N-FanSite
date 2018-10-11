@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace KateBushFanSite.Models
 {
+    /// <summary>
+    /// Properties for submitted stories
+    /// </summary>
     public class Story
     {
         //[Required(ErrorMessage = "Please enter a title")]

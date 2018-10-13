@@ -47,6 +47,11 @@
             <param name="story">an instance of the Story class with form-generated properties</param>
             <returns></returns>
         </member>
+        <member name="T:KateBushFanSite.Models.PrintSource">
+            <summary>
+            Properties for print sources
+            </summary>
+        </member>
         <member name="T:KateBushFanSite.Models.Repository">
             <summary>
             Stores sources and stories submitted by the user
@@ -57,10 +62,22 @@
             gets the list of submitted stories
             </summary>
         </member>
-        <member name="P:KateBushFanSite.Models.Repository.Sources">
+        <member name="P:KateBushFanSite.Models.Repository.PrintSources">
             <summary>
-            gets the list of submitted sources
+            gets the list of submitted print sources
             </summary>
+        </member>
+        <member name="P:KateBushFanSite.Models.Repository.WebSources">
+            <summary>
+            gets the list of submitted web sources
+            </summary>
+        </member>
+        <member name="M:KateBushFanSite.Models.Repository.GetStoryByTitle(System.String)">
+            <summary>
+            Returns a the story with the specified title
+            </summary>
+            <param name="title">the story's title</param>
+            <returns>corresponding Story object</returns>
         </member>
         <member name="M:KateBushFanSite.Models.Repository.AddStory(KateBushFanSite.Models.Story)">
             <summary>
@@ -68,20 +85,26 @@
             </summary>
             <param name="story">form-generated Story object</param>
         </member>
-        <member name="M:KateBushFanSite.Models.Repository.AddSource(KateBushFanSite.Models.Source)">
+        <member name="M:KateBushFanSite.Models.Repository.AddPrintSource(KateBushFanSite.Models.PrintSource)">
             <summary>
-            Adds a source to the list
+            Adds a print source to the list
             </summary>
-            <param name="source">form-generated Source object</param>
+            <param name="printSource">form-generated Source object</param>
         </member>
-        <member name="T:KateBushFanSite.Models.Source">
+        <member name="M:KateBushFanSite.Models.Repository.AddWebSource(KateBushFanSite.Models.WebSource)">
             <summary>
-            Properties for submitted sources
+            Adds a web source to the list
             </summary>
+            <param name="webSource">form-generated Source object</param>
         </member>
         <member name="T:KateBushFanSite.Models.Story">
             <summary>
             Properties for submitted stories
+            </summary>
+        </member>
+        <member name="T:KateBushFanSite.Models.WebSource">
+            <summary>
+            Properties for print sources
             </summary>
         </member>
     </members>

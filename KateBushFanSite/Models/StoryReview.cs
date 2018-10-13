@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace KateBushFanSite.Models
 {
-    public abstract class Source
+    public class StoryReview
     {
-        public string Title { get; set; }
+        public int Rating { get; set; }
+        public string Comment { get; set; }
     }
 }

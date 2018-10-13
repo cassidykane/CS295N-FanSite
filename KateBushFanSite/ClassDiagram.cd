@@ -36,9 +36,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="KateBushFanSite.Controllers.StoryController">
-    <Position X="7.25" Y="2.25" Width="2.75" />
+    <Position X="7.25" Y="2.25" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAEAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Controllers\StoryController.cs</FileName>
     </TypeIdentifier>
   </Class>

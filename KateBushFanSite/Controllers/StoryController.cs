@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KateBushFanSite.Models;
+using System.Web;
 
 namespace KateBushFanSite.Controllers
 {
@@ -13,12 +14,17 @@ namespace KateBushFanSite.Controllers
     public class StoryController : Controller
     {
         /// <summary>
-        /// Displays the story view populated with stories from the repository
+        /// Gets a list of stories from the the Repository
+        /// Sorts the stories by most recent date
+        /// Displays the story view populated with the sorted list
         /// </summary>
-        /// <returns>story/index.cshtml view, Story objects</returns>
+        /// <returns>story/index view with the sorted list</returns>
         public ViewResult Index()
         {
-            return View(Repository.Stories);
+            List<Story> stories = Repository.Stories;
+            stories.Sort((s1, s2) => DateTime.Compare(s1.Date, s2.Date));
+            stories.Reverse();
+            return View(stories);
         }
 
         /// <summary>
@@ -40,8 +46,21 @@ namespace KateBushFanSite.Controllers
         [HttpPost]
         public RedirectToActionResult SubmitStory(Story story)
         {
-            story.Rating = 0;
+            //story.Rating = 0;
             Repository.AddStory(story);
+            return RedirectToAction("Index");
+        }
+        
+        public IActionResult ReviewStory(string title)
+        {
+            return View("ReviewStory", HttpUtility.HtmlDecode(title));
+        }
+
+        [HttpPost]
+        public RedirectToActionResult ReviewStory(string title, string rating, string comment)
+        {
+            Story story = Repository.GetStoryByTitle(title);
+            story.Reviews.Add(new StoryReview() { Rating = Int32.Parse(rating), Comment = comment });
             return RedirectToAction("Index");
         }
     }

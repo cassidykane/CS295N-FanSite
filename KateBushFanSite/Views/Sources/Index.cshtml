@@ -23,25 +23,27 @@
 			</tr>
 		</thead>
 		<tbody>
-			@foreach (KateBushFanSite.Models.Source p in Model)
+			@foreach (Source s in Model)
 			{
-				if (p.Type == "print")
+				PrintSource p = s as PrintSource;
+				if (p != null)
 				{
 					<tr>
-						<td>@p.PrintTitle</td>
-						<td>@p.PrintAuthor</td>
+						<td>@p.Title</td>
+						<td>@p.Author</td>
 					</tr>
 				}
 			}
 			<tr>
 				<th>Online Media</th>
 			</tr>
-			@foreach (KateBushFanSite.Models.Source l in Model)
+			@foreach (Source s in Model)
 			{
-				if (l.Type == "link")
+				WebSource w = s as WebSource;
+				if (w != null)
 				{
 					<tr>
-						<td><a href=@l.LinkHref>@l.LinkTitle</a></td>
+						<td><a href=@w.Url>@w.Title</a></td>
 					</tr>
 				}
 			}

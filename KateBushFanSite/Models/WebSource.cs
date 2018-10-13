@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 
 namespace KateBushFanSite.Models
 {
-    public abstract class Source
+    /// <summary>
+    /// Properties for print sources
+    /// </summary>
+    public class WebSource : Source
     {
-        public string Title { get; set; }
+        public string Url { get; set; }
     }
 }

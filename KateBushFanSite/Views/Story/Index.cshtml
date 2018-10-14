@@ -19,12 +19,12 @@
 		@s.UserStory <br />
 		@if (s.Ratings.Count > 0)
 		{
-			<p>@s.AverageRating() / 5</p>
+			<p>Average Rating: @s.AverageRating() / 5</p>
 		}
 		<p>Comments:</p>
 		@foreach (StoryReview r in s.Reviews)
 		{
-			if (r.Comment.Length > 0)
+			if (r.Comment != null)
 			{
 			<p>@r.Comment</p>
 			}

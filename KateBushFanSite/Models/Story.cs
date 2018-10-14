@@ -28,8 +28,8 @@ namespace KateBushFanSite.Models
             {
                 foreach (StoryReview r in reviews)
                 {
-                    if (r.Rating > 0)
-                        ratings.Add(r.Rating);
+                    if (r.Rating != null)
+                        ratings.Add((int)r.Rating);
                 }
                 return ratings;
             }

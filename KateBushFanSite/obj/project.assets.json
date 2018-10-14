@@ -13226,11 +13226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sleeper\\Desktop\\CS 295N ASP.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-Lab2\\KateBushFanSite\\KateBushFanSite.csproj",
+      "projectUniqueName": "C:\\Users\\sleeper\\Desktop\\CS 295N ASP.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-FanSite\\KateBushFanSite\\KateBushFanSite.csproj",
       "projectName": "KateBushFanSite",
-      "projectPath": "C:\\Users\\sleeper\\Desktop\\CS 295N ASP.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-Lab2\\KateBushFanSite\\KateBushFanSite.csproj",
+      "projectPath": "C:\\Users\\sleeper\\Desktop\\CS 295N ASP.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-FanSite\\KateBushFanSite\\KateBushFanSite.csproj",
       "packagesPath": "C:\\Users\\sleeper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sleeper\\Desktop\\CS 295N ASP.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-Lab2\\KateBushFanSite\\obj\\",
+      "outputPath": "C:\\Users\\sleeper\\Desktop\\CS 295N ASP.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-FanSite\\KateBushFanSite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

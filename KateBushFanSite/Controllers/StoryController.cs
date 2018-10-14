@@ -59,8 +59,11 @@ namespace KateBushFanSite.Controllers
         [HttpPost]
         public RedirectToActionResult ReviewStory(string title, string rating, string comment)
         {
+            int? ratingNumber = null;
+            if (rating != null)
+                ratingNumber = Int32.Parse(rating);
             Story story = Repository.GetStoryByTitle(title);
-            story.Reviews.Add(new StoryReview() { Rating = Int32.Parse(rating), Comment = comment });
+            story.Reviews.Add(new StoryReview() { Rating = ratingNumber, Comment = comment });
             return RedirectToAction("Index");
         }
     }

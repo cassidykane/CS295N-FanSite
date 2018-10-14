@@ -21,6 +21,15 @@
             </summary>
             <returns>Home/History.cshtml view</returns>
         </member>
+        <member name="M:KateBushFanSite.Controllers.SourcesController.Index">
+            <summary>
+            Retrieves web and print sources from the repository
+            Sorts the print sources alphabetically by the first author's last name
+            Sorts the web sources alphabetically by title
+            Stores both of the sorted lists in a list of their base type (Source)
+            </summary>
+            <returns>the Source/Index with the Source list</returns>
+        </member>
         <member name="T:KateBushFanSite.Controllers.StoryController">
             <summary>
             Controls the logic for displaying and submitting stories
@@ -28,9 +37,11 @@
         </member>
         <member name="M:KateBushFanSite.Controllers.StoryController.Index">
             <summary>
-            Displays the story view populated with stories from the repository
+            Gets a list of stories from the the Repository
+            Sorts the stories by most recent date
+            Displays the story view populated with the sorted list
             </summary>
-            <returns>story/index.cshtml view, Story objects</returns>
+            <returns>story/index view with the sorted list</returns>
         </member>
         <member name="M:KateBushFanSite.Controllers.StoryController.SubmitStory">
             <summary>

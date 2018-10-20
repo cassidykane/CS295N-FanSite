@@ -14,7 +14,7 @@
 	@foreach (Story s in Model)
 	{
 	<div>
-		@s.Title <br />
+		<h2><b>@s.Title</b></h2>
 		@s.Date <br />
 		@s.UserStory <br />
 		@if (s.Ratings.Count > 0)
@@ -23,16 +23,19 @@
 		}
 		@if (s.Comments.Count > 0)
 		{
-			<p>Comments:</p>
-			@foreach (String comment in s.Comments)
-			{
-				<p>@comment</p>
-			}
+			<ul>
+				<u>Comments</u>:
+				@foreach (String comment in s.Comments)
+				{
+					<li>@comment</li>
+				}
+			</ul>
 		}
 
 		<a asp-action="ReviewStory" asp-route-title="@s.Title">Rate and Comment</a>
 	</div>
 	}
+	<br />
 	<a href="~/story/submitstory">Submit a story</a> <br />
 	<a href="~/">Home</a>
 	<a href="~/home/history">Biography</a>

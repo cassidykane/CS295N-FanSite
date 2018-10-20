@@ -1,33 +1,16 @@
 ﻿@{
-	Layout = null;
+	Layout = "Form";
+	ViewData["Title"] = "Submit A Story";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-	<meta name="viewport" content="width=device-width" />
-	<title>SubmitStory</title>
-</head>
-<body>
-	<form method="post">
-		<p>
-			<label for="title">Title:</label>
-			<input name="title" />
-		</p>
-		<p>
-			<label for="date">Date:</label>
-			<input name="date" />
-		</p>
-		<p>
-			<label for="userStory">Story:</label>
-			<input name="userStory" />
-		</p>
-		<button type="submit">Submit</button>
-	</form>
-	<a href="~/">Home</a>
-	<a href="~/home/history">Biography</a>
-	<a href="~/story">Stories</a>
-	<a href="~/sources">Sources</a>
-</body>
-</html>
+	<p>
+		<label for="title">Title:</label>
+		<input name="title" />
+	</p>
+	<p>
+		<label for="date">Date:</label>
+		<input name="date" />
+	</p>
+	<p>
+		<label for="userStory">Story:</label>
+		<input name="userStory" />
+	</p>

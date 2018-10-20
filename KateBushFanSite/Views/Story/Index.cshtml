@@ -1,18 +1,10 @@
 ﻿@model List<Story>
-@{
-	Layout = null;
+@{ 
+	ViewData["Title"] = "Stories";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-	<meta name="viewport" content="width=device-width" />
-	<title>Stories</title>
-</head>
-<body>
-	@foreach (Story s in Model)
-	{
+@foreach (Story s in Model)
+{
 	<div>
 		<h2><b>@s.Title</b></h2>
 		@s.Date <br />
@@ -34,11 +26,6 @@
 
 		<a asp-action="ReviewStory" asp-route-title="@s.Title">Rate and Comment</a>
 	</div>
-	}
-	<br />
-	<a href="~/story/submitstory">Submit a story</a> <br />
-	<a href="~/">Home</a>
-	<a href="~/home/history">Biography</a>
-	<a href="~/sources">Sources</a>
-</body>
-</html>
+}
+<br />
+<a href="~/story/submitstory">Submit a story</a> <br />

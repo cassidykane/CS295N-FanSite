@@ -8,16 +8,45 @@ namespace KateBushFanSite.Models
     /// <summary>
     /// Stores sources and stories submitted by the user
     /// </summary>
-    public class Repository
+    public static class Repository
     {
         private static List<Story> stories = new List<Story>();
-        private static List<PrintSource> printSources = new List<PrintSource>();
-        private static List<WebSource> webSources = new List<WebSource>();
+        private static List<PrintSource> printSources = new List<PrintSource>
+        {
+            new PrintSource()
+            {
+                Author = "author b",
+                Title = "this is a model-generated print source"
+            },
+            new PrintSource()
+            {
+                Author = "author c",
+                Title = "this is another model-generated print source"
+            },
+            new PrintSource()
+            {
+                Author = "author a",
+                Title = "this is yet another model-generated print source"
+            }
+        };
+        private static List<WebSource> webSources = new List<WebSource>
+        {
+            new WebSource()
+            {
+                Url = "#",
+                Title = "this is a model-generated link"
+            },
+            new WebSource()
+            {
+                Url = "#",
+                Title = "this is another model-generated link"
+            }
+        };
 
         /// <summary>
         /// gets the list of submitted stories
         /// </summary>
-        public static List<Story> Stories => stories;
+        public static List<Story> Stories { get { return stories; } }
         /// <summary>
         /// gets the list of submitted print sources
         /// </summary>

@@ -37,20 +37,26 @@ namespace KateBushFanSite.Controllers
         }
 
         /// <summary>
-        /// Sets the default rating of the story to zero
         /// Retrieves the form inputs and assigns them to corresponding properties of a Story object
         /// Adds the Story object to the repository
         /// </summary>
         /// <param name="story">an instance of the Story class with form-generated properties</param>
         /// <returns></returns>
         [HttpPost]
-        public RedirectToActionResult SubmitStory(Story story)
+        public RedirectToActionResult SubmitStory(string title, string date, string userStory)
         {
-            //story.Rating = 0;
+            //Repository.AddStory(story);
+            //return RedirectToAction("Index");
+            Story story = new Story()
+            {
+                Title = title,
+                Date = DateTime.Parse(date),
+                UserStory = userStory
+            };
             Repository.AddStory(story);
             return RedirectToAction("Index");
         }
-        
+
         public IActionResult ReviewStory(string title)
         {
             return View("ReviewStory", HttpUtility.HtmlDecode(title));
@@ -59,11 +65,16 @@ namespace KateBushFanSite.Controllers
         [HttpPost]
         public RedirectToActionResult ReviewStory(string title, string rating, string comment)
         {
-            int? ratingNumber = null;
-            if (rating != null)
-                ratingNumber = Int32.Parse(rating);
+            //int? ratingNumber = null;
+            //if (rating != null)
+            //    ratingNumber = Int32.Parse(rating);
+            //Story story = Repository.GetStoryByTitle(title);
+            //story.Reviews.Add(new StoryReview() { Rating = ratingNumber, Comment = comment });
             Story story = Repository.GetStoryByTitle(title);
-            story.Reviews.Add(new StoryReview() { Rating = ratingNumber, Comment = comment });
+            if (rating != null)
+                story.Ratings.Add(Int32.Parse(rating));
+            if (comment != null)
+                story.Comments.Add(comment);
             return RedirectToAction("Index");
         }
     }

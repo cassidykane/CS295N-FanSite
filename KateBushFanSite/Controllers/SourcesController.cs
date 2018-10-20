@@ -9,40 +9,6 @@ namespace KateBushFanSite.Controllers
 {
     public class SourcesController : Controller
     {
-        public SourcesController()
-        {
-            Repository.AddPrintSource(new PrintSource()
-            {
-                Author = "author b",
-                Title = "this is a model-generated print source"
-            });
-            Repository.AddPrintSource(new PrintSource()
-            {
-                Author = "author c",
-                Title = "this is another model-generated print source"
-            });
-            Repository.AddPrintSource(new PrintSource()
-            {
-                Author = "author a",
-                Title = "this is yet another model-generated print source"
-            });
-            Repository.AddWebSource(new WebSource()
-            {
-                Url = "#",
-                Title = "this is a model-generated link"
-            });
-            Repository.AddWebSource(new WebSource()
-            {
-                Url = "#",
-                Title = "this is another model-generated link"
-            });
-        }
-        /*
-        public IActionResult Index()
-        {
-            return View();
-        }
-        */
         /// <summary>
         /// Retrieves web and print sources from the repository
         /// Sorts the print sources alphabetically by the first author's last name

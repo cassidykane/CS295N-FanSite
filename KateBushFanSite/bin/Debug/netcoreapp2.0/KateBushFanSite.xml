@@ -49,9 +49,8 @@
             </summary>
             <returns>story/submitstory.cshtml view</returns>
         </member>
-        <member name="M:KateBushFanSite.Controllers.StoryController.SubmitStory(KateBushFanSite.Models.Story)">
+        <member name="M:KateBushFanSite.Controllers.StoryController.SubmitStory(System.String,System.String,System.String)">
             <summary>
-            Sets the default rating of the story to zero
             Retrieves the form inputs and assigns them to corresponding properties of a Story object
             Adds the Story object to the repository
             </summary>

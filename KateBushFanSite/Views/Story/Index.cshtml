@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Story>
+﻿@model List<Story>
 @{
 	Layout = null;
 }
@@ -21,12 +21,12 @@
 		{
 			<p>Average Rating: @s.AverageRating() / 5</p>
 		}
-		<p>Comments:</p>
-		@foreach (StoryReview r in s.Reviews)
+		@if (s.Comments.Count > 0)
 		{
-			if (r.Comment != null)
+			<p>Comments:</p>
+			@foreach (String comment in s.Comments)
 			{
-			<p>@r.Comment</p>
+				<p>@comment</p>
 			}
 		}
 

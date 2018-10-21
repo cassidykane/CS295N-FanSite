@@ -4,6 +4,10 @@
 	ViewData["Title"] = "Review Story";
 }
 <h1><em>@Model:</em> Rate and Comment</h1>
+@if (ViewBag.avgRating > 0)
+{
+	<p>Average rating for this story: @ViewBag.avgRating</p>
+}
 <p>
 	<label for="rating">Rate this story:</label>
 	<input type="radio" name="rating" id="radio1" value="1" />

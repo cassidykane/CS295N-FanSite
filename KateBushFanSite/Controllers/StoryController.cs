@@ -45,8 +45,6 @@ namespace KateBushFanSite.Controllers
         [HttpPost]
         public RedirectToActionResult SubmitStory(string title, string date, string userStory)
         {
-            //Repository.AddStory(story);
-            //return RedirectToAction("Index");
             Story story = new Story()
             {
                 Title = title,
@@ -59,23 +57,19 @@ namespace KateBushFanSite.Controllers
 
         public IActionResult ReviewStory(string title)
         {
+            ViewBag.avgRating = (Repository.GetStoryByTitle(title).Ratings.Count > 0) ? Repository.GetStoryByTitle(title).AverageRating() : 0;
             return View("ReviewStory", HttpUtility.HtmlDecode(title));
         }
 
         [HttpPost]
         public RedirectToActionResult ReviewStory(string title, string rating, string comment)
         {
-            //int? ratingNumber = null;
-            //if (rating != null)
-            //    ratingNumber = Int32.Parse(rating);
-            //Story story = Repository.GetStoryByTitle(title);
-            //story.Reviews.Add(new StoryReview() { Rating = ratingNumber, Comment = comment });
             Story story = Repository.GetStoryByTitle(title);
             if (rating != null)
                 story.Ratings.Add(Int32.Parse(rating));
             if (comment != null)
                 story.Comments.Add(comment);
-            return RedirectToAction("Index");
+            /return RedirectToAction("Index");
         }
     }
 }

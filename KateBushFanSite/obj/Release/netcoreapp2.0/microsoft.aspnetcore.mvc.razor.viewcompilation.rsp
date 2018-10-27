@@ -1,0 +1,16 @@
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=KateBushFanSite
+--content-root=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Home\History.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Home\Index.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Shared\Error.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Shared\Form.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Shared\_Layout.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Sources\Index.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Story\Index.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Story\ReviewStory.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\Story\SubmitStory.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\_ViewImports.cshtml
+--file=C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\Views\_ViewStart.cshtml

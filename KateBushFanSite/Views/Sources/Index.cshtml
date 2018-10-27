@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Source>
+﻿@model List<Source>
 @{
 	ViewData["Title"] = "Sources";
 	ViewBag.Header = "Sources";
@@ -41,3 +41,7 @@
 			}
 		</tbody>
 	</table>
+	<br />
+	<a href="~/sources/submitprintsource">Add a Print Source</a>
+	<a asp-action="SubmitWebSource">Add a Web Source</a>
+	<br />

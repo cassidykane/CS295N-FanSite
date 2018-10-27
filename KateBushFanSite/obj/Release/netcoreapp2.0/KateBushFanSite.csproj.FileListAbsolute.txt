@@ -1,0 +1,12 @@
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\KateBushFanSite.csprojAssemblyReference.cache
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\KateBushFanSite.csproj.CoreCompileInputs.cache
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\KateBushFanSite.AssemblyInfoInputs.cache
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\KateBushFanSite.AssemblyInfo.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\bin\Release\netcoreapp2.0\KateBushFanSite.deps.json
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\bin\Release\netcoreapp2.0\KateBushFanSite.runtimeconfig.json
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\bin\Release\netcoreapp2.0\KateBushFanSite.runtimeconfig.dev.json
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\bin\Release\netcoreapp2.0\KateBushFanSite.dll
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\bin\Release\netcoreapp2.0\KateBushFanSite.pdb
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\KateBushFanSite.dll
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\KateBushFanSite.pdb

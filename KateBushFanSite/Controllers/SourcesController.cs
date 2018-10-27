@@ -28,5 +28,60 @@ namespace KateBushFanSite.Controllers
             return View(sources);
         }
 
+
+        /// <summary>
+        /// Displays the view for the print source submission form
+        /// </summary>
+        /// <returns>sources/submitprintsource.cshtml view</returns>
+        public ViewResult SubmitPrintSource()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Retrieves the print source form inputs and assigns them to corresponding properties of a Story object
+        /// Adds the Story object to the repository
+        /// </summary>
+        /// <param name="title">user-submitted title</param>
+        /// /// <param name="author">user-submitted author name</param>
+        /// <returns>the sources/index.cshtml page</returns>
+        [HttpPost]
+        public RedirectToActionResult SubmitPrintSource(string title, string author)
+        {
+            PrintSource ps = new PrintSource()
+            {
+                Title = title,
+                Author = author
+            };
+            Repository.AddPrintSource(ps);
+            return RedirectToAction("Index");
+        }
+
+        /// <summary>
+        /// Displays the view for the web source submission form
+        /// </summary>
+        /// <returns>sources/submitwebsource.cshtml view</returns>
+        public ViewResult SubmitWebSource()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Retrieves the web source form inputs and assigns them to corresponding properties of a Story object
+        /// Adds the Story object to the repository
+        /// </summary>
+        /// <param name="title">user-submitted title</param>
+        /// /// <param name="url">user-submitted url</param>
+        /// <returns>the sources/index.cshtml page</returns>
+        [HttpPost] RedirectToActionResult SubmitWebSource(string title, string url)
+        {
+            WebSource ws = new WebSource()
+            {
+                Title = title,
+                Url = url
+            };
+            Repository.AddWebSource(ws);
+            return RedirectToAction("Index");
+        }
     }
 }

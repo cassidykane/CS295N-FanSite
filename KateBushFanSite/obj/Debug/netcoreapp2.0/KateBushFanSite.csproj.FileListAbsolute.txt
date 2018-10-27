@@ -45,3 +45,4 @@ C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSi
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.AssemblyInfo.cs
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.dll
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Debug\netcoreapp2.0\KateBushFanSite.pdb
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

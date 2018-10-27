@@ -15,17 +15,17 @@ namespace KateBushFanSite.Models
         {
             new PrintSource()
             {
-                Author = "author b",
+                Author = "Author B",
                 Title = "this is a model-generated print source"
             },
             new PrintSource()
             {
-                Author = "author c",
+                Author = "Author C",
                 Title = "this is another model-generated print source"
             },
             new PrintSource()
             {
-                Author = "author a",
+                Author = "Author A",
                 Title = "this is yet another model-generated print source"
             }
         };

@@ -40,8 +40,10 @@ namespace KateBushFanSite.Controllers
         /// Retrieves the form inputs and assigns them to corresponding properties of a Story object
         /// Adds the Story object to the repository
         /// </summary>
-        /// <param name="story">an instance of the Story class with form-generated properties</param>
-        /// <returns></returns>
+        /// <param name="title">user-submitted title</param>
+        /// /// <param name="date">user-submitted date</param>
+        /// /// <param name="userStory">user-submitted story</param>
+        /// <returns>the story/index.cshtml page</returns>
         [HttpPost]
         public RedirectToActionResult SubmitStory(string title, string date, string userStory)
         {
@@ -69,7 +71,7 @@ namespace KateBushFanSite.Controllers
                 story.Ratings.Add(Int32.Parse(rating));
             if (comment != null)
                 story.Comments.Add(comment);
-            /return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
     }
 }

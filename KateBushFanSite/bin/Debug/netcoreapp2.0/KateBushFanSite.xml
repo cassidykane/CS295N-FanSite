@@ -30,6 +30,36 @@
             </summary>
             <returns>the Source/Index with the Source list</returns>
         </member>
+        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitPrintSource">
+            <summary>
+            Displays the view for the print source submission form
+            </summary>
+            <returns>sources/submitprintsource.cshtml view</returns>
+        </member>
+        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitPrintSource(System.String,System.String)">
+            <summary>
+            Retrieves the print source form inputs and assigns them to corresponding properties of a Story object
+            Adds the Story object to the repository
+            </summary>
+            <param name="title">user-submitted title</param>
+            /// <param name="author">user-submitted author name</param>
+            <returns>the sources/index.cshtml page</returns>
+        </member>
+        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitWebSource">
+            <summary>
+            Displays the view for the web source submission form
+            </summary>
+            <returns>sources/submitwebsource.cshtml view</returns>
+        </member>
+        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitWebSource(System.String,System.String)">
+            <summary>
+            Retrieves the web source form inputs and assigns them to corresponding properties of a Story object
+            Adds the Story object to the repository
+            </summary>
+            <param name="title">user-submitted title</param>
+            /// <param name="url">user-submitted url</param>
+            <returns>the sources/index.cshtml page</returns>
+        </member>
         <member name="T:KateBushFanSite.Controllers.StoryController">
             <summary>
             Controls the logic for displaying and submitting stories
@@ -54,8 +84,10 @@
             Retrieves the form inputs and assigns them to corresponding properties of a Story object
             Adds the Story object to the repository
             </summary>
-            <param name="story">an instance of the Story class with form-generated properties</param>
-            <returns></returns>
+            <param name="title">user-submitted title</param>
+            /// <param name="date">user-submitted date</param>
+            /// <param name="userStory">user-submitted story</param>
+            <returns>the story/index.cshtml page</returns>
         </member>
         <member name="T:KateBushFanSite.Models.PrintSource">
             <summary>

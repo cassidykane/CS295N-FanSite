@@ -73,7 +73,8 @@ namespace KateBushFanSite.Controllers
         /// <param name="title">user-submitted title</param>
         /// /// <param name="url">user-submitted url</param>
         /// <returns>the sources/index.cshtml page</returns>
-        [HttpPost] RedirectToActionResult SubmitWebSource(string title, string url)
+        [HttpPost]
+        public RedirectToActionResult SubmitWebSource(string title, string url)
         {
             WebSource ws = new WebSource()
             {

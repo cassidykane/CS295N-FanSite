@@ -4,11 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KateBushFanSite.Models;
+using KateBushFanSite.Repositories;
+using System.Web;
 
 namespace KateBushFanSite.Controllers
 {
     public class SourcesController : Controller
     {
+        ISourceRepository sourceRepo;
+        /*public*/SourcesController(ISourceRepository repo)
+        {
+            sourceRepo = repo;
+        }
         /// <summary>
         /// Retrieves web and print sources from the repository
         /// Sorts the print sources alphabetically by the first author's last name
@@ -18,8 +25,8 @@ namespace KateBushFanSite.Controllers
         /// <returns>the Source/Index with the Source list</returns>
         public IActionResult Index()
         {
-            List<PrintSource> printSources = Repository.PrintSources;
-            List<WebSource> webSources = Repository.WebSources;
+            List<PrintSource> printSources = sourceRepo.PrintSources;
+            List<WebSource> webSources = sourceRepo.WebSources;
             List<Source> sources = new List<Source>();
             printSources.Sort((p1, p2) => string.Compare(p1.AuthorLastName, p2.AuthorLastName, StringComparison.Ordinal));
             webSources.Sort((w1, w2) => string.Compare(w1.Title, w2.Title, StringComparison.Ordinal));
@@ -53,7 +60,7 @@ namespace KateBushFanSite.Controllers
                 Title = title,
                 Author = author
             };
-            Repository.AddPrintSource(ps);
+            sourceRepo.AddPrintSource(ps);
             return RedirectToAction("Index");
         }
 
@@ -81,7 +88,8 @@ namespace KateBushFanSite.Controllers
                 Title = title,
                 Url = url
             };
-            Repository.AddWebSource(ws);
+
+            sourceRepo.AddWebSource(ws);
             return RedirectToAction("Index");
         }
     }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using KateBushFanSite.Repositories;
 
 namespace KateBushFanSite
 {
@@ -22,6 +23,9 @@ namespace KateBushFanSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddTransient<IStoryRepository, FakeStoryRepository>();
+            services.AddTransient<ISourceRepository, SourceRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

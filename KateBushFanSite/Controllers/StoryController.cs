@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KateBushFanSite.Models;
+using KateBushFanSite.Repositories;
 using System.Web;
 
 namespace KateBushFanSite.Controllers
@@ -13,6 +14,11 @@ namespace KateBushFanSite.Controllers
     /// </summary>
     public class StoryController : Controller
     {
+        IStoryRepository storyRepo;
+        public StoryController(IStoryRepository repo)
+        {
+            storyRepo = repo;
+        }
         /// <summary>
         /// Gets a list of stories from the the Repository
         /// Sorts the stories by most recent date
@@ -21,10 +27,22 @@ namespace KateBushFanSite.Controllers
         /// <returns>story/index view with the sorted list</returns>
         public ViewResult Index()
         {
-            List<Story> stories = Repository.Stories;
+            List<Story> stories = storyRepo.Stories;
+            if (stories == null)
+                return View("SubmitStory");
+            else if (stories.Count == 1)
+                return View(stories);
+            else
+            {
+                SortStories(stories);
+                return View(stories);
+            }
+        }
+
+        public void SortStories(List<Story> stories)
+        {
             stories.Sort((s1, s2) => DateTime.Compare(s1.Date, s2.Date));
             stories.Reverse();
-            return View(stories);
         }
 
         /// <summary>
@@ -53,20 +71,20 @@ namespace KateBushFanSite.Controllers
                 Date = DateTime.Parse(date),
                 UserStory = userStory
             };
-            Repository.AddStory(story);
+            storyRepo.AddStory(story);
             return RedirectToAction("Index");
         }
 
         public IActionResult ReviewStory(string title)
         {
-            ViewBag.avgRating = (Repository.GetStoryByTitle(title).Ratings.Count > 0) ? Repository.GetStoryByTitle(title).AverageRating() : 0;
+            ViewBag.avgRating = (storyRepo.GetStoryByTitle(title).Ratings.Count > 0) ? storyRepo.GetStoryByTitle(title).AverageRating() : 0;
             return View("ReviewStory", HttpUtility.HtmlDecode(title));
         }
 
         [HttpPost]
         public RedirectToActionResult ReviewStory(string title, string rating, string comment)
         {
-            Story story = Repository.GetStoryByTitle(title);
+            Story story = storyRepo.GetStoryByTitle(title);
             if (rating != null)
                 story.Ratings.Add(Int32.Parse(rating));
             if (comment != null)

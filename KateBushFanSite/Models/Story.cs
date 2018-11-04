@@ -27,19 +27,6 @@ namespace KateBushFanSite.Models
 
         public List<string> Comments { get { return comments; } }
 
-        /*public List<int> Ratings
-        {
-            get
-            {
-                foreach (StoryReview r in reviews)
-                {
-                    if (r.Rating != null)
-                        ratings.Add((int)r.Rating);
-                }
-                return ratings;
-            }
-        }
-        */
         public double AverageRating() => ratings.Average();
     }
 }

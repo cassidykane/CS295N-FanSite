@@ -10,6 +10,7 @@ namespace KateBushFanSite.Models
     /// </summary>
     public class PrintSource : Source
     {
+        public int PrintSourceID { get; set; }
         public string Author { get; set; }
 
         public string AuthorLastName

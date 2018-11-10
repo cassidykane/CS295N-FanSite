@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using KateBushFanSite.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace KateBushFanSite
 {
@@ -24,8 +25,10 @@ namespace KateBushFanSite
         {
             services.AddMvc();
 
-            services.AddTransient<IStoryRepository, FakeStoryRepository>();
+            services.AddTransient<IStoryRepository, StoryRepository>();
             services.AddTransient<ISourceRepository, SourceRepository>();
+
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration["Data:KateBushFanSite:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

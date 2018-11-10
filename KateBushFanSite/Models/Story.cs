@@ -14,6 +14,9 @@ namespace KateBushFanSite.Models
         //private List<StoryReview> reviews = new List<StoryReview>();
         private List<string> comments = new List<string>();
         private List<int> ratings = new List<int>();
+
+        public int StoryID { get; set; }
+
         //[Required(ErrorMessage = "Please enter a title")]
         public string Title { get; set; }
 

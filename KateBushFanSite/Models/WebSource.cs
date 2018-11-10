@@ -10,6 +10,7 @@ namespace KateBushFanSite.Models
     /// </summary>
     public class WebSource : Source
     {
+        public int WebSourceID { get; set; }
         public string Url { get; set; }
     }
 }

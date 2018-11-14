@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using KateBushFanSite.Repositories;
 using Microsoft.EntityFrameworkCore;
+using KateBushFanSite.Models;
 
 namespace KateBushFanSite
 {

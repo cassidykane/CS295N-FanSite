@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using KateBushFanSite.Models;
+using KateBushFanSite.Repositories;
 
-namespace KateBushFanSite.Repositories
+namespace KateBushFanSite.Test
 {
     /// <summary>
     /// Stores sources and stories submitted by the user
@@ -45,8 +46,19 @@ namespace KateBushFanSite.Repositories
             {
                 Title = "Story 1",
                 Date = new DateTime(18, 1, 21),
+                StoryText = "this is a test story"
             };
             stories.Add(story);
+        }
+
+        public void AddRating(Story story, Rating rating)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddComment(Story story, Comment comment)
+        {
+            throw new NotImplementedException();
         }
     }
 }

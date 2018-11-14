@@ -21,5 +21,9 @@ namespace KateBushFanSite.Repositories
         Story GetStoryByTitle(string title);
 
         void AddStory(Story story);
+
+        void AddRating(Story story, Rating rating);
+
+        void AddComment(Story story, Comment comment);
     }
 }

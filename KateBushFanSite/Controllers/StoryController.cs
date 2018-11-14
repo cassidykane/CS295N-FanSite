@@ -69,7 +69,7 @@ namespace KateBushFanSite.Controllers
             {
                 Title = title,
                 Date = DateTime.Parse(date),
-                UserStory = userStory
+                StoryText = userStory
             };
             storyRepo.AddStory(story);
             return RedirectToAction("Index");
@@ -77,7 +77,8 @@ namespace KateBushFanSite.Controllers
 
         public IActionResult ReviewStory(string title)
         {
-            ViewBag.avgRating = (storyRepo.GetStoryByTitle(title).Ratings.Count > 0) ? storyRepo.GetStoryByTitle(title).AverageRating() : 0;
+            ViewBag.avgRating = (storyRepo.GetStoryByTitle(title).Ratings != null) ? storyRepo.GetStoryByTitle(title).AverageRating() : 0;
+            //ViewBag.avgRating = storyRepo.GetStoryByTitle(title).AverageRating();
             return View("ReviewStory", HttpUtility.HtmlDecode(title));
         }
 
@@ -86,9 +87,9 @@ namespace KateBushFanSite.Controllers
         {
             Story story = storyRepo.GetStoryByTitle(title);
             if (rating != null)
-                story.Ratings.Add(Int32.Parse(rating));
+                storyRepo.AddRating(story, new Rating() { RatingNumber = int.Parse(rating) }); 
             if (comment != null)
-                story.Comments.Add(comment);
+                storyRepo.AddComment(story, new Comment() { CommentText = comment});
             return RedirectToAction("Index");
         }
     }

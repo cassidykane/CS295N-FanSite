@@ -104,29 +104,6 @@
             Properties for print sources
             </summary>
         </member>
-        <member name="T:KateBushFanSite.Repositories.FakeStoryRepository">
-            <summary>
-            Stores sources and stories submitted by the user
-            </summary>
-        </member>
-        <member name="P:KateBushFanSite.Repositories.FakeStoryRepository.Stories">
-            <summary>
-            gets the list of submitted stories
-            </summary>
-        </member>
-        <member name="M:KateBushFanSite.Repositories.FakeStoryRepository.GetStoryByTitle(System.String)">
-            <summary>
-            Returns a the story with the specified title
-            </summary>
-            <param name="title">the story's title</param>
-            <returns>corresponding Story object</returns>
-        </member>
-        <member name="M:KateBushFanSite.Repositories.FakeStoryRepository.AddStory(KateBushFanSite.Models.Story)">
-            <summary>
-            Adds a story to the list
-            </summary>
-            <param name="story">form-generated Story object</param>
-        </member>
         <member name="P:KateBushFanSite.Repositories.IStoryRepository.Stories">
             <summary>
             gets/sets the list of submitted stories
@@ -160,6 +137,29 @@
             Adds a web source to the list
             </summary>
             <param name="webSource">form-generated Source object</param>
+        </member>
+        <member name="T:KateBushFanSite.Repositories.StoryRepository">
+            <summary>
+            Stores sources and stories submitted by the user
+            </summary>
+        </member>
+        <member name="P:KateBushFanSite.Repositories.StoryRepository.Stories">
+            <summary>
+            gets the list of submitted stories
+            </summary>
+        </member>
+        <member name="M:KateBushFanSite.Repositories.StoryRepository.GetStoryByTitle(System.String)">
+            <summary>
+            Returns a the story with the specified title
+            </summary>
+            <param name="title">the story's title</param>
+            <returns>corresponding Story object</returns>
+        </member>
+        <member name="M:KateBushFanSite.Repositories.StoryRepository.AddStory(KateBushFanSite.Models.Story)">
+            <summary>
+            Adds a story to the list
+            </summary>
+            <param name="story">form-generated Story object</param>
         </member>
     </members>
 </doc>

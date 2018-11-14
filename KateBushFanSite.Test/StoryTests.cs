@@ -39,8 +39,8 @@ namespace KateBushFanSite.Test
 
             storyController.ReviewStory("Story 1", "2", "wow");
 
-            Assert.Equal(2, repo.Stories[0].Ratings[0]);
-            Assert.Equal("wow", repo.Stories[0].Comments[0]);
+            Assert.Equal(2, repo.Stories[0].Ratings[0].RatingNumber);
+            Assert.Equal("wow", repo.Stories[0].Comments[0].CommentText);
         }
     }
 }

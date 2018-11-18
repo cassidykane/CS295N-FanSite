@@ -12,7 +12,7 @@ namespace KateBushFanSite.Controllers
     public class SourcesController : Controller
     {
         ISourceRepository sourceRepo;
-        /*public*/SourcesController(ISourceRepository repo)
+        public SourcesController(ISourceRepository repo)
         {
             sourceRepo = repo;
         }
@@ -25,8 +25,8 @@ namespace KateBushFanSite.Controllers
         /// <returns>the Source/Index with the Source list</returns>
         public IActionResult Index()
         {
-            List<PrintSource> printSources = sourceRepo.PrintSources;
-            List<WebSource> webSources = sourceRepo.WebSources;
+            List<PrintSource> printSources = sourceRepo.PrintSources.ToList();
+            List<WebSource> webSources = sourceRepo.WebSources.ToList();
             List<Source> sources = new List<Source>();
             printSources.Sort((p1, p2) => string.Compare(p1.AuthorLastName, p2.AuthorLastName, StringComparison.Ordinal));
             webSources.Sort((w1, w2) => string.Compare(w1.Title, w2.Title, StringComparison.Ordinal));

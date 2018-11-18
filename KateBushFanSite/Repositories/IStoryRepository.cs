@@ -11,7 +11,7 @@ namespace KateBushFanSite.Repositories
         /// <summary>
         /// gets/sets the list of submitted stories
         /// </summary>
-        List<Story> Stories { get; }
+        IQueryable<Story> Stories { get; }
 
         /// <summary>
         /// Returns a the story with the specified title

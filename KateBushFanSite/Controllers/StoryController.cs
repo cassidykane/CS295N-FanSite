@@ -27,7 +27,7 @@ namespace KateBushFanSite.Controllers
         /// <returns>story/index view with the sorted list</returns>
         public ViewResult Index()
         {
-            List<Story> stories = storyRepo.Stories;
+            List<Story> stories = storyRepo.Stories.ToList();
             if (stories == null)
                 return View("SubmitStory");
             else if (stories.Count == 1)
@@ -77,7 +77,7 @@ namespace KateBushFanSite.Controllers
 
         public IActionResult ReviewStory(string title)
         {
-            ViewBag.avgRating = (storyRepo.GetStoryByTitle(title).Ratings != null) ? storyRepo.GetStoryByTitle(title).AverageRating() : 0;
+            ViewBag.avgRating = (storyRepo.GetStoryByTitle(title).Ratings.Count > 0) ? storyRepo.GetStoryByTitle(title).AverageRating : 0;
             //ViewBag.avgRating = storyRepo.GetStoryByTitle(title).AverageRating();
             return View("ReviewStory", HttpUtility.HtmlDecode(title));
         }

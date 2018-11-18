@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using KateBushFanSite.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace KateBushFanSite.Repositories
 {
@@ -16,7 +17,7 @@ namespace KateBushFanSite.Repositories
         /// <summary>
         /// gets the list of submitted stories
         /// </summary>
-        public List<Story> Stories => context.Stories.ToList();
+        public IQueryable<Story> Stories => context.Stories.Include("Ratings").Include("Comments");
 
         public StoryRepository(AppDbContext appContext)
         {

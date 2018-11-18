@@ -18,23 +18,23 @@ namespace KateBushFanSite.Models
 
         [Required(ErrorMessage = "Please enter a title")]
         public string Title { get; set; }
-
         [Required(ErrorMessage = "Please enter a Date")]
         public DateTime Date { get; set; }
-
         [Required(ErrorMessage = "Please enter a Story")]
         public string StoryText { get; set; }
 
-        public List<Comment> Comments { get; set; }
-
-        public List<Rating> Ratings { get; set; }
-
-        public double AverageRating()
+        public double AverageRating
         {
-            List<int> ratingNumbers = new List<int>();
-            foreach (Rating r in ratings)
-                ratingNumbers.Add(r.RatingNumber);
-            return ratingNumbers.Average();
+            get
+            {
+                List<int> ratingNumbers = new List<int>();
+                foreach (Rating r in Ratings)
+                    ratingNumbers.Add(r.RatingNumber);
+                return ratingNumbers.Average();
+            }
         }
+
+        public ICollection<Comment> Comments { get { return comments; } }
+        public ICollection<Rating> Ratings { get { return ratings; } }
     }
 }

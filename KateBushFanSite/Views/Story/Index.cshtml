@@ -10,9 +10,9 @@
 	<h2><b>@s.Title</b></h2>
 	@s.Date <br />
 	@s.StoryText <br />
-	@if (s.Ratings != null)
+	@if (s.Ratings.Count > 0)
 	{
-		<p>Average Rating: @s.AverageRating() / 5</p>
+		<p>Average Rating: @s.AverageRating / 5</p>
 	}
 	@if (s.Comments != null)
 	{

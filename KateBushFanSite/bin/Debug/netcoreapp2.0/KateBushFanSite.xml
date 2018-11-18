@@ -116,16 +116,6 @@
             <param name="title">the story's title</param>
             <returns>corresponding Story object</returns>
         </member>
-        <member name="P:KateBushFanSite.Repositories.SourceRepository.PrintSources">
-            <summary>
-            gets the list of submitted print sources
-            </summary>
-        </member>
-        <member name="P:KateBushFanSite.Repositories.SourceRepository.WebSources">
-            <summary>
-            gets the list of submitted web sources
-            </summary>
-        </member>
         <member name="M:KateBushFanSite.Repositories.SourceRepository.AddPrintSource(KateBushFanSite.Models.PrintSource)">
             <summary>
             Adds a print source to the list

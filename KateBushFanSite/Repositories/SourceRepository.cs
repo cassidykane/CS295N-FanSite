@@ -3,34 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using KateBushFanSite.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace KateBushFanSite.Repositories
 {
     public class SourceRepository : ISourceRepository
     {
-        private List<PrintSource> printSources = new List<PrintSource>();
-        private List<WebSource> webSources = new List<WebSource>();
+        private AppDbContext context;
 
-        /// <summary>
-        /// gets the list of submitted print sources
-        /// </summary>
-        public List<PrintSource> PrintSources => printSources;
+        public IQueryable<PrintSource> PrintSources => context.PrintSources;
+        public IQueryable<WebSource> WebSources => context.WebSources;
 
-        /// <summary>
-        /// gets the list of submitted web sources
-        /// </summary>
-        public List<WebSource> WebSources => webSources;
+        public SourceRepository(AppDbContext appContext)
+        {
+            context = appContext;
+        }
 
         /// <summary>
         /// Adds a print source to the list
         /// </summary>
         /// <param name="printSource">form-generated Source object</param>
-        public void AddPrintSource(PrintSource printSource) => printSources.Add(printSource);
+        public void AddPrintSource(PrintSource printSource)
+        {
+            context.PrintSources.Add(printSource);
+            context.SaveChanges();
+        }
 
         /// <summary>
         /// Adds a web source to the list
         /// </summary>
         /// <param name="webSource">form-generated Source object</param>
-        public void AddWebSource(WebSource webSource) => webSources.Add(webSource);
+        public void AddWebSource(WebSource webSource)
+        {
+            context.WebSources.Add(webSource);
+            context.SaveChanges();
+        }
     }
 }

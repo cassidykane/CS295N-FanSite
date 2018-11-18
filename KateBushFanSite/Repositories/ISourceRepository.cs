@@ -6,10 +6,10 @@ using KateBushFanSite.Models;
 
 namespace KateBushFanSite.Repositories
 {
-    interface ISourceRepository
+    public interface ISourceRepository
     {
-        List<PrintSource> PrintSources { get; }
-        List<WebSource> WebSources { get; }
+        IQueryable<PrintSource> PrintSources { get; }
+        IQueryable<WebSource> WebSources { get; }
 
         void AddPrintSource(PrintSource printSource);
         void AddWebSource(WebSource webSource);

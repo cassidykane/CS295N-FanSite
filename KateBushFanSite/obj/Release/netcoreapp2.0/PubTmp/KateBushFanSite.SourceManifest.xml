@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
   <IisApp path="C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\Lab1\KateBushFanSite\CS295N-FanSite\KateBushFanSite\obj\Release\netcoreapp2.0\PubTmp\EFSQLScripts\KateBushFanSite.Models.AppDbContext.sql" />
 </sitemanifest>

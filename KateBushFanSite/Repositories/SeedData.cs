@@ -37,6 +37,65 @@ namespace KateBushFanSite.Repositories
 
                 context.SaveChanges();
             }
+
+            if (!context.PrintSources.Any())
+            {
+                PrintSource ps = new PrintSource
+                {
+                    Title = "Book 3",
+                    Author = "Author C"
+                };
+                context.PrintSources.Add(ps);
+
+                ps = new PrintSource
+                {
+                    Title = "Book 4",
+                    Author = "Author C"
+                };
+                context.PrintSources.Add(ps);
+
+                ps = new PrintSource
+                {
+                    Title = "Book 2",
+                    Author = "Author B"
+                };
+                context.PrintSources.Add(ps);
+
+                ps = new PrintSource
+                {
+                    Title = "Book 1",
+                    Author = "Author A"
+                };
+                context.PrintSources.Add(ps);
+
+                context.SaveChanges();
+            }
+
+            if (!context.PrintSources.Any())
+            {
+                WebSource ws = new WebSource
+                {
+                    Title = "Wikipedia Entry",
+                    Url = "https://en.wikipedia.org/wiki/Kate_Bush"
+                };
+                context.WebSources.Add(ws);
+
+                ws = new WebSource
+                {
+                    Title = "Official Site",
+                    Url = "http://katebush.com/"
+                };
+                context.WebSources.Add(ws);
+
+                new WebSource
+                {
+                    Title = "AllMusic Bio",
+                    Url = "https://www.allmusic.com/artist/kate-bush-mn0000855423"
+                };
+                context.WebSources.Add(ws);
+
+                context.SaveChanges();
+            }
         }
     }
 }

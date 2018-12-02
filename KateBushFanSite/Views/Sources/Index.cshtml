@@ -4,6 +4,58 @@
 	ViewBag.Header = "Sources";
 }
 
+<form method="post">
+	Search by Author<br />
+	Author:
+	<input name="author" />
+	<input type="submit" />
+</form>
+
+<table>
+	<thead>
+		<tr>
+			<th>Print Media</th>
+		</tr>
+		<tr>
+			<th>Title</th>
+			<th>Author/s</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Source s in Model)
+		{
+			PrintSource p = s as PrintSource;
+			if (p != null)
+			{
+				<tr>
+					<td>@p.Title</td>
+					<td>@p.Author</td>
+				</tr>
+			}
+		}
+		<tr>
+			<th>Online Media</th>
+		</tr>
+		@foreach (Source s in Model)
+		{
+			WebSource w = s as WebSource;
+			if (w != null)
+			{
+				<tr>
+					<td><a href=@w.Url>@w.Title</a></td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<br />
+<a href="~/sources/submitprintsource">Add a Print Source</a>
+<a href="~/sources/submitwebsource">Add a Web Source</a>
+<br />
+
+@*
+
 	<table>
 		<thead>
 			<tr>
@@ -41,7 +93,4 @@
 			}
 		</tbody>
 	</table>
-	<br />
-	<a href="~/sources/submitprintsource">Add a Print Source</a>
-	<a href="~/sources/submitwebsource">Add a Web Source</a>
-	<br />
+*@

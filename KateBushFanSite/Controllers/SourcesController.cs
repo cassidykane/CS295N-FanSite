@@ -35,6 +35,14 @@ namespace KateBushFanSite.Controllers
             return View(sources);
         }
 
+        [HttpPost]
+        public IActionResult Index(string author)
+        {
+            List<Source> printSources = (from ps in sourceRepo.PrintSources
+                                   where ps.Author.ToLower() == author.ToLower()
+                                   select ps).ToList<Source>();
+            return View(printSources);
+        }
 
         /// <summary>
         /// Displays the view for the print source submission form
@@ -53,14 +61,19 @@ namespace KateBushFanSite.Controllers
         /// /// <param name="author">user-submitted author name</param>
         /// <returns>the sources/index.cshtml page</returns>
         [HttpPost]
-        public RedirectToActionResult SubmitPrintSource(string title, string author)
+        public RedirectToActionResult SubmitPrintSource(PrintSource ps)
         {
-            PrintSource ps = new PrintSource()
+            if (ModelState.IsValid)
             {
-                Title = title,
-                Author = author
-            };
-            sourceRepo.AddPrintSource(ps);
+                /*
+                PrintSource ps = new PrintSource()
+                {
+                    Title = title,
+                    Author = author
+                };
+                */
+                sourceRepo.AddPrintSource(ps);
+            }
             return RedirectToAction("Index");
         }
 
@@ -81,15 +94,19 @@ namespace KateBushFanSite.Controllers
         /// /// <param name="url">user-submitted url</param>
         /// <returns>the sources/index.cshtml page</returns>
         [HttpPost]
-        public RedirectToActionResult SubmitWebSource(string title, string url)
+        public RedirectToActionResult SubmitWebSource(WebSource ws)
         {
-            WebSource ws = new WebSource()
+            if (ModelState.IsValid)
             {
-                Title = title,
-                Url = url
-            };
-
-            sourceRepo.AddWebSource(ws);
+                /*
+                WebSource ws = new WebSource()
+                {
+                    Title = title,
+                    Url = url,
+                };
+                */
+                sourceRepo.AddWebSource(ws);
+            }
             return RedirectToAction("Index");
         }
     }

@@ -39,6 +39,15 @@ namespace KateBushFanSite.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult Index(string title)
+        {
+            List<Story> stories = (from s in storyRepo.Stories
+                                where s.Title == title
+                                select s).ToList();
+            return View(stories);
+        }
+
         public void SortStories(List<Story> stories)
         {
             stories.Sort((s1, s2) => DateTime.Compare(s1.Date, s2.Date));
@@ -63,15 +72,20 @@ namespace KateBushFanSite.Controllers
         /// /// <param name="userStory">user-submitted story</param>
         /// <returns>the story/index.cshtml page</returns>
         [HttpPost]
-        public RedirectToActionResult SubmitStory(string title, string date, string userStory)
+        public RedirectToActionResult SubmitStory(Story story)
         {
-            Story story = new Story()
+            if (ModelState.IsValid)
             {
-                Title = title,
-                Date = DateTime.Parse(date),
-                StoryText = userStory
-            };
-            storyRepo.AddStory(story);
+                /*
+                Story story = new Story()
+                {
+                    Title = title,
+                    Date = DateTime.Parse(date),
+                    StoryText = userStory
+                };
+                */
+                storyRepo.AddStory(story);
+            }
             return RedirectToAction("Index");
         }
 
@@ -85,11 +99,14 @@ namespace KateBushFanSite.Controllers
         [HttpPost]
         public RedirectToActionResult ReviewStory(string title, string rating, string comment)
         {
-            Story story = storyRepo.GetStoryByTitle(title);
-            if (rating != null)
-                storyRepo.AddRating(story, new Rating() { RatingNumber = int.Parse(rating) }); 
-            if (comment != null)
-                storyRepo.AddComment(story, new Comment() { CommentText = comment});
+            if (ModelState.IsValid)
+            {
+                Story story = storyRepo.GetStoryByTitle(title);
+                if (rating != null)
+                    storyRepo.AddRating(story, new Rating() { RatingNumber = int.Parse(rating) });
+                if (comment != null)
+                    storyRepo.AddComment(story, new Comment() { CommentText = comment });
+            }
             return RedirectToAction("Index");
         }
     }

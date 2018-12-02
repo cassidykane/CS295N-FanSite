@@ -1,13 +1,16 @@
-﻿@{
+﻿@model WebSource
+@{
 	Layout = "Form";
 	ViewData["Title"] = "Submit A Web Source";
 }
 <p>
-	<label for="title">Title:</label>
-	<input name="title" />
+	<label asp-for="Title">Title:</label>
+	<div><span asp-validation-for="Title"> </span></div>
+	<input asp-for="Title" />
 </p>
 <p>
-	<label for="url">Url:</label>
-	<input name="url" />
+	<label asp-for="Url">Url:</label>
+	<div><span asp-validation-for="Url"> </span></div>
+	<input asp-for="Url" />
 </p>
 

@@ -11,9 +11,10 @@ using System;
 namespace KateBushFanSite.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181130194809_Third")]
+    partial class Third
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,8 +26,7 @@ namespace KateBushFanSite.Migrations
                     b.Property<int>("CommentID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CommentText")
-                        .HasMaxLength(200);
+                    b.Property<string>("CommentText");
 
                     b.Property<int?>("StoryID");
 
@@ -42,13 +42,9 @@ namespace KateBushFanSite.Migrations
                     b.Property<int>("PrintSourceID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasMaxLength(30);
+                    b.Property<string>("Author");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Title");
 
                     b.HasKey("PrintSourceID");
 
@@ -94,13 +90,9 @@ namespace KateBushFanSite.Migrations
                     b.Property<int>("WebSourceID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Title");
 
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Url");
 
                     b.HasKey("WebSourceID");
 

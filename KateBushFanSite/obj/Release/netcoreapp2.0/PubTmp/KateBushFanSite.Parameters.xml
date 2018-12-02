@@ -3,7 +3,4 @@
   <parameter name="IIS Web Application Name" description="" value="KateBushFanSite" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\sleeper\\Desktop\\CS\ 295N\ ASP\.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-FanSite\\KateBushFanSite\\obj\\Release\\netcoreapp2\.0\\PubTmp\\Out\\$" />
   </parameter>
-  <parameter name="KateBushFanSite.Models.AppDbContext" description="" value="Server=tcp:fansiteserver.database.windows.net,1433;Initial Catalog=FanSite;Persist Security Info=False;User ID={cassidy};Password={applepie*89};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\sleeper\\Desktop\\CS\ 295N\ ASP\.NET\\repos\\Lab1\\KateBushFanSite\\CS295N-FanSite\\KateBushFanSite\\obj\\Release\\netcoreapp2\.0\\PubTmp\\EFSQLScripts\\KateBushFanSite\.Models\.AppDbContext\.sql$" />
-  </parameter>
 </parameters>

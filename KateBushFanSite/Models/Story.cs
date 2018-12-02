@@ -16,10 +16,15 @@ namespace KateBushFanSite.Models
 
         public int StoryID { get; set; }
 
+        [StringLength(100, MinimumLength = 1)]
         [Required(ErrorMessage = "Please enter a title")]
         public string Title { get; set; }
+
+        [DataType(DataType.Date)]
         [Required(ErrorMessage = "Please enter a Date")]
         public DateTime Date { get; set; }
+
+        [StringLength(400, MinimumLength = 20)]
         [Required(ErrorMessage = "Please enter a Story")]
         public string StoryText { get; set; }
 

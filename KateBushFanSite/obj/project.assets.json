@@ -2805,6 +2805,21 @@
           }
         }
       },
+      "Microsoft.WindowsAzure.SDK/2.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.WindowsAzure.Diagnostics.dll": {},
+          "lib/Microsoft.WindowsAzure.ServiceRuntime.dll": {},
+          "lib/WindowsAzureEventSource.dll": {},
+          "lib/WindowsAzureTelemetryEvents.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAzure.Diagnostics.dll": {},
+          "lib/Microsoft.WindowsAzure.ServiceRuntime.dll": {},
+          "lib/WindowsAzureEventSource.dll": {},
+          "lib/WindowsAzureTelemetryEvents.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -6945,7 +6960,7 @@
       ]
     },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
-      "sha512": "UMlN++q5qqzQ2HH+uOrKxN5fmBXMQDhrYkSaPJxhmyzfJaFPirrVr1raim/Ocq1psAZoB9+7JSAf0GDAX35wUg==",
+      "sha512": "H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
       "type": "package",
       "path": "microsoft.extensions.platformabstractions/1.1.0",
       "files": [
@@ -7864,6 +7879,20 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.WindowsAzure.SDK/2.9.0": {
+      "sha512": "3pUdVGwfOm2RV/ipaX073zuA0c02FWr31MKTTkGYQ4QcL04CTEDWFSdz0v24IhvNsnDwb2rdsfiT9tXckNlYGA==",
+      "type": "package",
+      "path": "microsoft.windowsazure.sdk/2.9.0",
+      "files": [
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAzure.Diagnostics.dll",
+        "lib/Microsoft.WindowsAzure.ServiceRuntime.dll",
+        "lib/WindowsAzureEventSource.dll",
+        "lib/WindowsAzureTelemetryEvents.dll",
+        "microsoft.windowsazure.sdk.2.9.0.nupkg.sha512",
+        "microsoft.windowsazure.sdk.nuspec"
       ]
     },
     "NETStandard.Library/2.0.0": {
@@ -13216,6 +13245,7 @@
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.2",
+      "Microsoft.WindowsAzure.SDK >= 2.9.0",
       "Nevron.Nov.Diagram >= 17.5.29.12"
     ]
   },
@@ -13273,6 +13303,10 @@
             "target": "Package",
             "version": "[2.0.2, )"
           },
+          "Microsoft.WindowsAzure.SDK": {
+            "target": "Package",
+            "version": "[2.9.0, )"
+          },
           "Nevron.Nov.Diagram": {
             "target": "Package",
             "version": "[17.5.29.12, )"
@@ -13287,6 +13321,16 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.WindowsAzure.SDK 2.9.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.WindowsAzure.SDK",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

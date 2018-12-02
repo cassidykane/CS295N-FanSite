@@ -22,6 +22,5 @@ namespace KateBushFanSite
                 .UseStartup<Startup>()
                 .UseDefaultServiceProvider(options => options.ValidateScopes = false)
                 .Build();
-
     }
 }

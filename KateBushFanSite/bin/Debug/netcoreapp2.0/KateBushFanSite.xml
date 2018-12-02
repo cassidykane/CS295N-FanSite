@@ -36,7 +36,7 @@
             </summary>
             <returns>sources/submitprintsource.cshtml view</returns>
         </member>
-        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitPrintSource(System.String,System.String)">
+        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitPrintSource(KateBushFanSite.Models.PrintSource)">
             <summary>
             Retrieves the print source form inputs and assigns them to corresponding properties of a Story object
             Adds the Story object to the repository
@@ -51,7 +51,7 @@
             </summary>
             <returns>sources/submitwebsource.cshtml view</returns>
         </member>
-        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitWebSource(System.String,System.String)">
+        <member name="M:KateBushFanSite.Controllers.SourcesController.SubmitWebSource(KateBushFanSite.Models.WebSource)">
             <summary>
             Retrieves the web source form inputs and assigns them to corresponding properties of a Story object
             Adds the Story object to the repository
@@ -79,7 +79,7 @@
             </summary>
             <returns>story/submitstory.cshtml view</returns>
         </member>
-        <member name="M:KateBushFanSite.Controllers.StoryController.SubmitStory(System.String,System.String,System.String)">
+        <member name="M:KateBushFanSite.Controllers.StoryController.SubmitStory(KateBushFanSite.Models.Story)">
             <summary>
             Retrieves the form inputs and assigns them to corresponding properties of a Story object
             Adds the Story object to the repository

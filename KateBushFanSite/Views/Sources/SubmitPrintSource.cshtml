@@ -1,13 +1,16 @@
-﻿@{
+﻿@model PrintSource
+@{
 	Layout = "Form";
 	ViewData["Title"] = "Submit A Print Source";
 }
 <p>
-	<label for="title">Title:</label>
-	<input name="title" />
+	<label asp-for="Title">Title:</label>
+	<div><span asp-validation-for="Title"> </span></div>
+	<input asp-for="Title" />
 </p>
 <p>
-	<label for="author">Author:</label>
-	<input name="author" />
+	<label asp-for="Author">Author:</label>
+	<div><span asp-validation-for="Author"> </span></div>
+	<input asp-for="Author" />
 </p>
 

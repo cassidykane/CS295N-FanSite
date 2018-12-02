@@ -1,16 +1,20 @@
-﻿@{
+﻿@model Story
+@{
 	Layout = "Form";
 	ViewData["Title"] = "Submit A Story";
 }
-	<p>
-		<label for="title">Title:</label>
-		<input name="title" />
-	</p>
-	<p>
-		<label for="date">Date:</label>
-		<input name="date" />
-	</p>
-	<p>
-		<label for="userStory">Story:</label>
-		<input name="userStory" />
-	</p>
+<p>
+	<label asp-for="Title">Title:</label>
+	<div><span asp-validation-for="Title"> </span></div>
+	<input asp-for="Title" /><br />
+</p>
+<p>
+	<label asp-for="Date">Date:</label>
+	<div><span asp-validation-for="Date"> </span></div>
+	<input asp-for="Date" />
+</p>
+<p>
+	<label asp-for="StoryText">Story:</label>
+	<div><span asp-validation-for="Story"> </span></div>
+	<input asp-for="StoryText" />
+</p>

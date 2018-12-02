@@ -1,0 +1,8 @@
+﻿@model List<PrintSource>
+
+@{var author = Model[0].Author;}
+<h3>All titles by @author</h3>
+@foreach (PrintSource p in Model)
+{
+	@p.Title <br>
+}
